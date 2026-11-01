@@ -1,0 +1,1 @@
+console.log("this is a hello from second external js file");
