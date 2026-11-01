@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - createElement</title>
+</head>
+
+<body>
+    <nav class="block">
+        <p>welcome to my website</p>
+    </nav>
+    <div class="block">
+        <h4 id="name-block">hey there, my name is <span id="username">Ibrahim Ahmad</span></h4>
+        <p class="paragraph">here is code for you</p>
+        <pre><code>console.log("hey there")</code></pre>
+    </div>
+
+    <div class="block">
+        <h4>this div can't be hacked! loser hahahah</h4>
+    </div>
+
+    <div id="my-container"></div>
+
+    <button id="click-btn">Click Me</button>
+
+    <script>
+        const clickBtn = document.getElementById("click-btn");
+        const myContainer = document.getElementById("my-container");
+
+        clickBtn.addEventListener("click", ()=>{
+            const el = document.createElement("h1");
+            el.innerText = "Ibrahim Ahmad";
+            myContainer.appendChild(el);
+        })
+    </script>
+</body>
+
+</html>

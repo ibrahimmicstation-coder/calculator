@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - getElementById</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="block">
+        <p>welcome to my website</p>
+    </nav>
+    <div class="block">
+        <h4>hey there, my name is <span id="username">Ibrahim Ahmad</span></h4>
+        <p class="paragraph">here is code for you</p>
+        <pre><code>console.log("hey there")</code></pre>
+    </div>
+
+    <div class="block">
+        <h4>this div can't be hacked! loser hahahah</h4>
+    </div>
+
+    <img style="width: 100px;">
+
+    <script>
+        const el = document.getElementById("username");
+        el.innerText = "S. Ibrahim Ahmad";
+
+        // inject css using js
+        // add the class in your element of html using js
+        el.classList.add("red-color", "underline")
+        // remove the class
+        el.classList.remove("red-color")
+
+        // add css in html elements directly from js
+        el.style.color = "tomato";
+        el.style.textDecoration = "underline purple wavy 3px";
+        el.parentElement.style.background = "grey";
+
+        console.log(el);
+        console.log(el.id);
+        
+        // set the attribute
+        let img = document.querySelector('img');
+        img.setAttribute("src", "https://preview.redd.it/who-made-the-famous-cockroach-illustration-for-metamorphosis-v0-30qty069x4ld1.jpeg?auto=webp&s=85adf08068debf95294f4f20ffb275dfda22dfd1")
+
+        // you can remove the element of html
+        // el.remove()
+    </script>
+</body>
+</html>

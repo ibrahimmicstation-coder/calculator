@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - query selector</title>
+</head>
+<body>
+    <nav class="block">
+        <p>welcome to my website</p>
+    </nav>
+    <div class="block">
+        <h4>hey there, my name is <span id="username">Ibrahim Ahmad</span></h4>
+        <p class="paragraph">here is code for you</p>
+        <pre><code>console.log("hey there")</code></pre>
+    </div>
+
+    <div class="block">
+        <h4>this div can't be hacked! loser hahahah</h4>
+    </div>
+
+    <script>
+        /*
+        query selector - select only the first element he got
+
+        selectors
+        - tag: name
+        - id: #
+        - class: .
+        */
+
+        // print the body tag of html
+        const body = document.querySelector("body");
+        console.log(body);
+        
+        // change the html
+        // const div = document.querySelector("div");
+        // div.innerHTML = "<h1>hacked!</h1>"
+
+        // id: #
+        const username = document.querySelector("#username");
+        console.log(username.innerText);
+        // change in id
+        username.innerText = "Maaz Ahmad"
+
+        // innertext: print the text and change the text only not html
+        // innerhtml: print the html and change the html
+
+        // class: .
+        const block = document.querySelector(".block");
+        console.log(block.innerHTML);
+        // children - the element that are in under parent element
+        console.log(block.children);
+        // parentelement
+        console.log(block.parentElement);
+        console.log(block.parentElement.children);
+    </script>
+</body>
+</html>
