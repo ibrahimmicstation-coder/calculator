@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Document Object Model</title>
+</head>
+<body>
+    <h1>DOM - Document Object Model</h1>
+
+    <script>
+        alert("hey there i am a bubble");
+        const value = prompt("whats your name?")
+        console.log(value);
+
+        // we call our browser window
+        // there's a window object
+        console.log(window);
+
+        // document
+        // your html code is avaible on document
+        console.log(document.title);
+        // change the title
+        document.title = "abcd"
+        // print the body code of your html
+        console.log(document.body);
+        // document.write - it write your line in the end of body
+        document.write("this is hacked")
+        // say hello to visiter using document.write
+        document.write("hello "+value)
+    </script>
+</body>
+</html>
