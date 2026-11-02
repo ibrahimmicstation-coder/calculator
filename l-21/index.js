@@ -25,3 +25,16 @@ addto5(2);
 addto10(10);
 
 // practical clousure
+const myName = document.getElementById("my-name");
+const myBtn = document.getElementById("my-btn");
+const myNormalBtn = document.getElementById("my-normal-btn");
+function maketextsizer(size) {
+    function changesize() {
+        myName.style.fontSize = `${size}px`;
+    }
+    return changesize;
+};
+const size100 = maketextsizer(100);
+const size50 = maketextsizer(50);
+myBtn.addEventListener("click", size100);
+myNormalBtn.addEventListener("click", size50);
