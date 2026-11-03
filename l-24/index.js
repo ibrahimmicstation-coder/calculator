@@ -25,6 +25,14 @@ console.log(data);
 const atm = (function(initialBalance) {
     let balance = initialBalance;
     function withdraw(amount) {
-        
+        if (amount>balance) {
+            console.log("are you kidding");
+        } else {
+            balance -= atm;
+            console.log(balance);
+        }
     }
+    return {withdraw};
 })
+const ibrahim = atm(1000)
+console.log(ibrahim.withdraw(100));
